@@ -1,213 +1,92 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mod.mi – Магазин брендового одягу</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      color: #333;
-    }
+  <title>Document</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
 
-    /* Верхня панель */
-    header {
-      background-color: #f8d9e8;
-      display: flex;
-      align-items: center;
-      padding: 10px;
-    }
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+  
+  <!-- Flag Icons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
 
-    header .logo {
-      font-size: 24px;
-      font-style: italic;
-      font-weight: bold;
-      margin-right: 40px;
-    }
-
-    nav {
-      flex-grow: 1;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #0077aa;
-    }
-
-    .search {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-    }
-
-    .search input {
-      padding: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    .search button {
-      margin-left: 8px;
-      padding: 6px 12px;
-      border: none;
-      border-radius: 5px;
-      background-color: #eee;
-      cursor: pointer;
-    }
-
-    /* Слоган */
-    .slogan {
-      text-align: center;
-      font-size: 20px;
-      margin: 15px 0;
-      font-style: italic;
-    }
-
-    /* Таблиця 2x3 */
-    table {
-      margin: 0 auto;
-      border-spacing: 20px;
-    }
-
-    td {
-      width: 150px;
-      height: 80px;
-      background-color: #b3e5fc;
-      border-radius: 5px;
-    }
-
-    /* Контент */
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      margin: 30px;
-      gap: 20px;
-    }
-
-    .gallery {
-      display: flex;
-      gap: 10px;
-    }
-
-    .gallery img {
-      width: 200px;
-      height: auto;
-      border-radius: 5px;
-    }
-
-    .text-block {
-      max-width: 400px;
-    }
-
-    .text-block h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .text-block p {
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    /* Нижня панель */
-    footer {
-      background-color: #f8d9e8;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-    }
-
-    footer nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-    }
-
-    footer nav a:hover {
-      color: #0077aa;
-    }
-
-    footer .contact {
-      color: #b30000;
-      font-weight: bold;
-    }
-  </style>
+  <title>WebApp</title>
+  
 </head>
 <body>
-
-  <!-- Верхня панель -->
+  <!-- Header -->
   <header>
-    <div class="logo">Mod.mi</div>
-    <nav>
-      <a href="#">новинки</a>
-      <a href="#">одяг</a>
-      <a href="#">взуття</a>
-      <a href="#">аксесуари</a>
-      <a href="#">бренди</a>
-      <a href="#">акції</a>
-    </nav>
-    <div class="search">
-      <input type="text" placeholder="Пошук...">
-      <button>Пошук</button>
+    <div class="header-left">
+      <!-- Language menu -->
+      <div class="select-menu">
+        <div class="select-button">
+          <span class="sLngBtn-text">Language</span>
+          <i class="bx bx-chevron-down"></i>
+        </div>
+
+        <ul class="options">
+          <li class="option">
+            <span class="fi fi-gb"></span>
+            <span class="option-text">English</span>
+          </li>
+
+          <li class="option">
+            <span class="fi fi-ua"></span>
+            <span class="option-text">Ukrainian</span>
+          </li>
+
+          <li class="option">
+            <span class="fi fi-es"></span>
+            <span class="option-text">Spanish</span>
+          </li>
+
+          <li class="option">
+            <span class="fi fi-fr"></span>
+            <span class="option-text">French</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Town menu 
+      <div class="select-menu">
+        <div class="select-button">
+          <span class="sTwnBtn-text">Міста</span>
+          <i class="bx bx-chevron-down"></i>
+        </div>
+
+        <ul class="options">
+          <li class="option">
+            <i class='bx bx-building-house'></i>
+            <span class="option-text">Київ</span>
+          </li>
+
+          <li class="option">
+            <i class='bx bx-building-house'></i>
+            <span class="option-text">Харків</span>
+          </li>
+
+          <li class="option">
+            <i class='bx bx-building-house'></i>
+            <span class="option-text">Львів</span>
+          </li>
+
+          <li class="option">
+            <i class='bx bx-building-house'></i>
+            <span class="option-text">Дніпро</span>
+          </li>
+
+          <li class="option">
+            <i class='bx bx-building-house'></i>
+            <span class="option-text">Вінниця</span>
+          </li>
+        </ul>
+      </div>
     </div>
+    -->
   </header>
-
-  <!-- Слоган -->
-  <div class="slogan">
-    Магазин брендового італійського одягу <strong>Mod.mi</strong>
-  </div>
-
-  <!-- Таблиця 2x3 -->
-  <table>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
-
-  <!-- Контент -->
-  <div class="content">
-    <div class="gallery">
-      <img src="dress1.jpg" alt="Сукня 1">
-      <img src="dress2.jpg" alt="Сукня 2">
-      <img src="dress3.jpg" alt="Сукня 3">
-    </div>
-    <div class="text-block">
-      <h2>Подих морських кольорів з Mod.mi</h2>
-      <p>
-        Нова колекція Mod.mi — це подих моря, створений у співпраці з відомим автором.
-        Вона поєднує в собі всю глибину та свіжість морських кольорів, даруючи відчуття
-        літньої безтурботності. Відкрийте для себе нові відтінки у новій колекції 2025.
-      </p>
-    </div>
-  </div>
-
-  <!-- Нижня панель -->
-  <footer>
-    <nav>
-      <a href="#">акаунт</a>
-      <a href="#">про магазин</a>
-      <a href="#">контакти</a>
-      <a href="#">дод.інформація</a>
-    </nav>
-    <div class="contact">+38 066 444 77 99</div>
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
