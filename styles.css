@@ -10,15 +10,53 @@
 
 header {
     display: flex;
-    justify-content: flex-start; /* усе вліво */
-    align-items: center;
+    justify-content: space-between; /* лівий блок зліва, правий справа */
+    align-items: flex-start;         /* вирівнюємо по верхній лінії */
     padding: 20px 40px;
-  }
-  
+    width: 100%;
+    position: relative;              /* дозволяє центру позиціонуватися */
+}
+
+/* Лівий блок */
 .header-left {
     display: flex;
-    gap: 30px; /* відстань між двома меню */
-  }
+    gap: 30px;
+    align-items: center;
+    
+}
+
+/* Центральний блок */
+.header-center {
+    position: absolute;              /* відриваємо від потоку */
+    left: 50%;                       /* ставимо в центр */
+    transform: translateX(-50%);     /* точне центрування */
+    text-align: center;
+    top: 65px;                       /* трохи нижче верхньої лінії (регулюй як треба) */
+}
+
+.header-center .title p {
+    font-weight: 300;                /* light */
+    font-size: 64px;                 /* великий заголовок */
+    color: #333;                     /* або #fff, якщо темний фон */
+    letter-spacing: 2px;             /* трохи простору між літерами — гарно виглядає */
+    margin: 0;
+}
+
+/* Правий блок */
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 35px; 
+}
+
+.header-right .logo i {
+    font-size: 30px;          /* Збільшуємо розмір значків */
+    cursor: pointer;          /* Курсор змінюється на pointer при наведенні */
+    color: #333;              /* Колір іконок (можеш змінити) */
+}
+
+
 
 .select-menu{
     width: 200px;
@@ -90,4 +128,99 @@ header {
     color: #333;
 }
 
+
+
+/* Навігаційний список */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;             /* відстань між пунктами */
+    list-style: none;      /* прибираємо крапочки */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none; /* прибрати підкреслення */
+    color: #000000;           /* колір тексту */
+    font-size: 20px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #545454; /* при наведенні — темніший колір */
+}
+
+
+
+
+
+/* ==== Footer ==== */
+footer {
+    display: flex;
+    flex-direction: column;   /* логотипи зверху, посилання нижче */
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+/* Контейнер для логотипів та ліній */
+.footer-up-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;               /* відстань між лініями і логотипами */
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Лінії по боках */
+.line {
+    flex: 1;                 /* лінії тягнуться на всю доступну ширину */
+    height: 2px;
+    background-color: #aeacac;
+}
+
+/* Логотипи */
+.footer-up {
+    display: flex;
+    gap: 25px;               /* відстань між іконками */
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-up .logo i {
+    font-size: 32px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-up .logo i:hover {
+    color: #545454;
+    transform: scale(1.1);
+}
+
+/* Список посилань */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;         /* на вузьких екранах переходять у новий рядок */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 100px;              /* відстань між пунктами */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #393838;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #545454;
+}
 
