@@ -10,14 +10,13 @@
 
 header {
     display: flex;
-    justify-content: space-between; /* лівий блок зліва, правий справа */
-    align-items: flex-start;         /* вирівнюємо по верхній лінії */
+    justify-content: space-between; 
+    align-items: flex-start;         
     padding: 20px 40px;
     width: 100%;
-    position: relative;              /* дозволяє центру позиціонуватися */
+    position: relative;              
 }
 
-/* Лівий блок */
 .header-left {
     display: flex;
     gap: 30px;
@@ -25,7 +24,6 @@ header {
     
 }
 
-/* Центральний блок */
 .header-center {
     position: absolute;             
     left: 50%;                      
@@ -42,7 +40,6 @@ header {
     margin: 0;
 }
 
-/* Правий блок */
 .header-right {
     display: flex;
     gap: 20px;
@@ -130,18 +127,17 @@ header {
 
 
 
-/* Навігаційний список */
 .nav-links {
     display: flex;
     justify-content: center;
-    gap: 30px;             /* відстань між пунктами */
+    gap: 30px;             
     list-style: none;      
     padding: 0;
     margin: 0;
 }
 
 .nav-links a {
-    text-decoration: none; /* прибрати підкреслення */
+    text-decoration: none; 
     color: #000000;           
     font-size: 20px;
     font-weight: 400;
@@ -153,22 +149,20 @@ header {
 }
 
 
-
-/* MAIN */
 main {
     margin-top: 30px;
     display: flex;
-    justify-content: center; /* центрує по горизонталі */
-    align-items: center;     /* центрує по вертикалі */
-    min-height: 80vh;        /* займає 80% висоти екрана */
-    background-color: #f9f9f9; /* необов’язково — фон */
+    justify-content: center; 
+    align-items: center;     
+    min-height: 80vh;        
+    background-color: #f9f9f9; 
   }
   
   main img {
-    width: 100%;      /* або 100%*/
-    height: auto;      /* зберігає пропорції */
-    border-radius: 1px; /* заокруглені кути */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* тінь для краси */
+    width: 100%;      
+    height: auto;      
+    border-radius: 1px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
   }
 
 
@@ -187,19 +181,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;               /* відстань між лініями і логотипами */
+    gap: 30px;               
     margin-bottom: 30px;
     width: 100%;
 }
 
-/* Лінії по боках */
 .line {
     flex: 1;               
     height: 2px;
     background-color: #aeacac;
 }
 
-/* Логотипи */
 .footer-up {
     display: flex;
     gap: 25px;              
