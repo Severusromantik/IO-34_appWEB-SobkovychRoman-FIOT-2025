@@ -149,23 +149,101 @@ header {
 }
 
 
+/* Main */
 main {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     justify-content: center; 
-    align-items: center;     
-    min-height: 80vh;        
-    background-color: #f9f9f9; 
-  }
-  
-  main img {
-    width: 100%;      
-    height: auto;      
-    border-radius: 1px; 
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-  }
+    align-items: flex-start;
+    min-height: 50vh; 
+    background-color: #ffffff; 
+    padding: 0 10px; /* Захисні відступи */
+}
+
+/* Контейнер для центрування вмісту */
+.main-content-wrapper {
+    max-width: 1200px; /* Фіксована ширина для десктопу */
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 20px 0;
+}
+
+/* НОВИЙ СТИЛЬ: Обгортка для великого зображення */
+.hero-image-wrapper {
+    /* Тут може бути додатковий padding/margin, якщо потрібно відокремити його */
+    margin-bottom: 40px; /* Відступ до секції 4 фото */
+    border-radius: 1px;
+    overflow: hidden; /* Забезпечує, що border-radius застосовується до зображення */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Стилі для ВЕЛИКОГО ФОТО */
+.main-hero-image {
+    width: 100%; 
+    height: auto; 
+    display: block; /* Уникаємо зайвих проміжків */
+    /* Видаляємо border-radius та box-shadow, оскільки вони тепер у hero-image-wrapper */
+}
 
 
+/* Стилі для СЕКЦІЇ 4 ФОТО (Mobile First: 1 колонка) */
+.main-content-seasons {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 колонка на мобільних за замовчуванням */
+    gap: 15px; 
+    width: 100%; 
+}
+
+.season-card {
+    /* ... існуючі стилі ... */
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    /* Додаємо фіксоване співвідношення сторін до картки */
+    /* Наприклад, 4:3 (ширше) або 1:1 (квадрат) */
+    aspect-ratio: 4 / 3; 
+}
+
+.season-card img {
+    width: 100%; 
+    /* Змушуємо зображення покривати весь простір і обрізатися, якщо це потрібно */
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+    transition: transform 0.3s ease;
+}
+.season-card:hover img { transform: scale(1.05); }
+
+/* Стилі для кнопки */
+.card-button {
+    position: absolute; bottom: 20px; left: 20px;
+    padding: 10px 20px;
+    background-color: #536dfe; 
+    color: white; border: none; border-radius: 25px;
+    font-size: 16px; font-weight: 500; cursor: pointer;
+    text-transform: uppercase; transition: background-color 0.3s ease;
+}
+.card-button:hover { background-color: #3b50c0; }
+
+
+/* ---------------------------------------------------- */
+/* ДЕСКТОПНА АДАПТАЦІЯ (Min-Width: 768px або 1024px) */
+/* ---------------------------------------------------- */
+
+@media (min-width: 768px) {
+    /* На екранах від 768px (планшети та десктопи) встановлюємо сітку 2x2 */
+    .main-content-seasons {
+        grid-template-columns: 1fr 1fr; /* 2 колонки, щоб створити 2x2 макет */
+        gap: 20px;
+    }
+    
+    /* Прибираємо захисні відступи на великому екрані */
+    main {
+        padding: 0;
+    }
+}
 
 /* ==== Footer ==== */
 footer {

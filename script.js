@@ -1,3 +1,4 @@
+/*
 const optionMenu = document.querySelector(".select-menu"),
        selectBtn = optionMenu.querySelector(".select-button"),
        options = optionMenu.querySelectorAll(".option"),
@@ -12,3 +13,13 @@ options.forEach(option =>{
         optionMenu.classList.remove("active");
     });
 });
+
+*/
+
+
+
+
+
+
+
+
