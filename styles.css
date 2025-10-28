@@ -54,14 +54,12 @@ header {
 }
 
 
-/* Стилі для кнопки гамбургера */
 .menu-toggle {
-    display: none; /* Гамбургер ПРИХОВАНО на десктопі */
+    display: none; 
 }
 .menu-toggle i {
     font-size: 30px; 
     cursor: pointer;
-    /* Можна додати для вирівнювання, якщо потрібно */
     padding-top: 5px; 
 }
 
@@ -167,10 +165,9 @@ main {
     align-items: flex-start;
     min-height: 50vh; 
     background-color: #ffffff; 
-    padding: 0 10px; /* Захисні відступи */
+    padding: 0 10px; 
 }
 
-/* Контейнер для центрування вмісту */
 .main-content-wrapper {
     max-width: 1200px; 
     width: 100%; 
@@ -200,14 +197,12 @@ main {
 }
 
 .slide-content {
-    /* Обгортка слайда: займає 100% ширини і є батьківським елементом для позиціонування кнопок */
     flex: 1 0 100%;
     scroll-snap-align: start;
     position: relative; 
 }
 
 .slider img {
-    /* Зображення заповнює весь контейнер, обрізаючи зайве */
     width: 100%; 
     height: 100%; 
     object-fit: cover;
@@ -216,11 +211,11 @@ main {
 
 .slide-actions {
     position: absolute;
-    bottom: 10%; /* Відступ знизу */
+    bottom: 10%; 
     left: 10%;
     display: flex;
     gap: 15px;
-    z-index: 2; /* Щоб були над зображенням */
+    z-index: 2; 
 }
 
 .action-button {
@@ -255,7 +250,7 @@ main {
     bottom: 1.25rem;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1; /* Нижче, ніж кнопки */
+    z-index: 1; 
 }
 
 .slide-dots a {
@@ -273,29 +268,24 @@ main {
 
 
 
-/* Стилі для СЕКЦІЇ 4 ФОТО (Mobile First: 1 колонка) */
 .main-content-seasons {
     display: grid;
-    grid-template-columns: 1fr; /* 1 колонка на мобільних за замовчуванням */
+    grid-template-columns: 1fr; 
     gap: 15px; 
     width: 100%; 
 }
 
 .season-card {
-    /* ... існуючі стилі ... */
     position: relative; 
     overflow: hidden; 
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     
-    /* Додаємо фіксоване співвідношення сторін до картки */
-    /* Наприклад, 4:3 (ширше) або 1:1 (квадрат) */
     aspect-ratio: 4 / 3; 
 }
 
 .season-card img {
     width: 100%; 
-    /* Змушуємо зображення покривати весь простір і обрізатися, якщо це потрібно */
     height: 100%; 
     object-fit: cover; 
     display: block; 
@@ -303,7 +293,6 @@ main {
 }
 .season-card:hover img { transform: scale(1.05); }
 
-/* Стилі для кнопки */
 .card-button {
     position: absolute; bottom: 20px; left: 20px;
     padding: 10px 20px;
@@ -320,13 +309,11 @@ main {
 /* ---------------------------------------------------- */
 
 @media (min-width: 768px) {
-    /* На екранах від 768px (планшети та десктопи) встановлюємо сітку 2x2 */
     .main-content-seasons {
-        grid-template-columns: 1fr 1fr; /* 2 колонки, щоб створити 2x2 макет */
+        grid-template-columns: 1fr 1fr; 
         gap: 20px;
     }
     
-    /* Прибираємо захисні відступи на великому екрані */
     main {
         padding: 0;
     }
@@ -341,7 +328,6 @@ footer {
     background-color: #ffffff;
 }
 
-/* Контейнер для логотипів та ліній */
 .footer-up-wrapper {
     display: flex;
     align-items: center;
@@ -407,63 +393,54 @@ footer {
 /* ==================================================== */
 @media (max-width: 1024px) {
     
-    /* 1. Спрощуємо відступи та розмір шрифтів у header */
     header {
         padding: 15px 20px;
         align-items: center; 
-        /* Змінюємо сітку: Гамбургер | ЛОГО | ІКОНКИ */
         display: grid;
         grid-template-columns: auto 1fr auto; 
         gap: 20px; 
     }
 
-    /* 2. Приховуємо або зменшуємо елементи, які не поміщаються */
-    
-    /* Приховуємо головне навігаційне меню (Жіноче, Чоловіче...) */
     .header-center .nav-links {
         display: none; 
     }
 
-    /* 3. Переміщуємо та зменшуємо логотип BRENDS */
+
     .header-center {
-        /* Прибираємо десктопне абсолютне позиціонування */
         position: static; 
         transform: none; 
-        text-align: center; /* Центруємо його всередині 1fr колонки */
+        text-align: center; 
         margin: 0; 
     }
     
     .header-center .title p {
-        font-size: 36px; /* Зменшуємо розмір логотипу */
+        font-size: 36px; 
         letter-spacing: 1px;
         font-weight: 400;
     }
     
-    /* 4. Керування лівою секцією (Мова/Міста/Гамбургер) */
     .header-left {
-        display: flex; /* Показуємо лівий блок */
+        display: flex; 
         align-items: center;
-        gap: 0; /* Прибираємо gap, оскільки видно лише одну іконку */
+        gap: 0; 
     }
 
-    /* ПРИХОВУЄМО десктопні меню мови та міст на мобільному */
+   
     .header-left .select-menu {
         display: none; 
     }
     
-    /* ПОКАЗУЄМО кнопку-гамбургер на мобільному (припускаємо, що .menu-toggle: display: none; у загальних стилях) */
     .menu-toggle {
         display: block; 
     }
 
 
-    /* 5. Регулюємо іконки праворуч */
     .header-right {
-        margin-top: 0; /* Прибираємо зайвий відступ */
-        gap: 15px; /* Зменшуємо відступи між іконками */
+        margin-top: 0; 
+        gap: 15px; 
     }
     .header-right .logo i {
-        font-size: 24px; /* Зменшуємо розмір іконок */
+        font-size: 24px; 
     }
 }
 
@@ -474,12 +451,10 @@ footer {
 /* ==================================================== */
 @media (max-width: 768px) {
     
-    /* Зменшуємо загальний відступ у футері */
     footer {
         padding: 20px 10px;
     }
 
-    /* Зменшуємо відступ між іконками */
     .footer-up {
         gap: 15px;
     }
@@ -487,18 +462,14 @@ footer {
         font-size: 24px;
     }
     
-    /* Найважливіше: зменшуємо gap між посиланнями */
-    .footer-links {
-        /* Зменшуємо відступ до розумного рівня */
+    .footer-links {     
         gap: 15px 30px; 
-        /* Робимо шрифт трохи меншим для кращого розміщення */
         font-size: 16px;
     }
     .footer-links a {
         font-size: 16px;
     }
 
-    /* Зменшуємо відступ від соціальних іконок до посилань */
     .footer-up-wrapper {
         margin-bottom: 20px;
     }
