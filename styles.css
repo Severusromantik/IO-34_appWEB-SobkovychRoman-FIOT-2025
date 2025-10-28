@@ -168,22 +168,118 @@ main {
     padding: 20px 0;
 }
 
-/* НОВИЙ СТИЛЬ: Обгортка для великого зображення */
-.hero-image-wrapper {
-    /* Тут може бути додатковий padding/margin, якщо потрібно відокремити його */
-    margin-bottom: 40px; /* Відступ до секції 4 фото */
-    border-radius: 1px;
-    overflow: hidden; /* Забезпечує, що border-radius застосовується до зображення */
+
+.slider-container {
+    margin-bottom: 40px;
+}
+
+.slider-wrapper {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden; 
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Стилі для ВЕЛИКОГО ФОТО */
-.main-hero-image {
-    width: 100%; 
-    height: auto; 
-    display: block; /* Уникаємо зайвих проміжків */
-    /* Видаляємо border-radius та box-shadow, оскільки вони тепер у hero-image-wrapper */
+.slider {
+    display: flex;
+    aspect-ratio: 10 / 6;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
+
+.slide-content {
+    /* Обгортка слайда: займає 100% ширини і є батьківським елементом для позиціонування кнопок */
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    position: relative; 
+}
+
+.slider img {
+    /* Зображення заповнює весь контейнер, обрізаючи зайве */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    display: block;
+}
+
+.slide-actions {
+    position: absolute;
+    bottom: 10%; /* Відступ знизу */
+    left: 10%;
+    display: flex;
+    gap: 15px;
+    z-index: 2; /* Щоб були над зображенням */
+}
+
+.action-button {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: #f73b64; 
+    color: white;
+    border: 2px solid #f73b64;
+}
+
+.secondary-btn {
+    background-color: white;
+    color: #333;
+    border: 2px solid white;
+}
+
+.primary-btn:hover { background-color: #e52952; }
+.secondary-btn:hover { opacity: 0.9; }
+
+.slide-dots {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Нижче, ніж кнопки */
+}
+
+.slide-dots a {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slide-dots a:hover{
+    opacity: 1;
+}
+
+
+/* ---------------------------------------------------- */
+/* ВИПРАВЛЕННЯ СТРИБКІВ МАКЕТА (CSS-FIX) */
+/* ---------------------------------------------------- */
+/* Застосовується лише на десктопі, де header фіксований */
+@media (min-width: 1024px) {
+    /* Визначаємо висоту фіксованого хедера (приблизно 130px) */
+    :root {
+        --header-height: 130px; 
+    }
+    
+    /* Додаємо відступ зверху, коли браузер прокручується до зображення 
+       (щоб воно не ховалося під фіксованим меню) */
+    .slide-content {
+        scroll-margin-top: var(--header-height); 
+    }
+}
+
+
 
 
 /* Стилі для СЕКЦІЇ 4 ФОТО (Mobile First: 1 колонка) */
@@ -220,12 +316,12 @@ main {
 .card-button {
     position: absolute; bottom: 20px; left: 20px;
     padding: 10px 20px;
-    background-color: #536dfe; 
+    background-color: #f73b64; 
     color: white; border: none; border-radius: 25px;
     font-size: 16px; font-weight: 500; cursor: pointer;
     text-transform: uppercase; transition: background-color 0.3s ease;
 }
-.card-button:hover { background-color: #3b50c0; }
+.card-button:hover { background-color: #e52952; }
 
 
 /* ---------------------------------------------------- */
