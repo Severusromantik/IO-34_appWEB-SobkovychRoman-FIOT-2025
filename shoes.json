@@ -1,0 +1,378 @@
+[
+    {
+      "id": 1,
+      "name": "Air VaporMax Plus",
+      "brand": "Nike",
+      "price": 220,
+      "category": "man",
+      "season": ["spring", "summer"],
+      "image": "img_databse/AIR+VAPORMAX+PLUS.avif"
+    },
+
+    {
+      "id": 2,
+      "name": "V5 RNR",
+      "brand": "Nike",
+      "price": 115,
+      "category": "man",
+      "season": ["spring", "summer"],
+      "image": "img_databse/NIKE+V5+RNR.avif"
+    },
+
+    {
+        "id": 3,
+        "name": "Dunk Low Retro SE",
+        "brand": "Nike",
+        "price": 130,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/NIKE+DUNK+LOW+RETRO+SE.avif"
+    },
+
+    {
+        "id": 4,
+        "name": "Air Max 2017",
+        "brand": "Nike",
+        "price": 160,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/NIKE+AIR+MAX+2017.avif"
+    },
+
+    {
+        "id": 5,
+        "name": "Vaporfly 4",
+        "brand": "Nike",
+        "price": 217,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/ZOOMX+VAPORFLY+NEXT%+4.avif"
+    },
+
+    {
+        "id": 6,
+        "name": "Pegasus 41",
+        "brand": "Nike",
+        "price": 97,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/AIR+ZOOM+PEGASUS+41+RUN.avif"
+    },
+
+    {
+        "id": 7,
+        "name": "Dunk Low Retro",
+        "brand": "Nike",
+        "price": 80,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/NIKE+DUNK+LOW+RETRO.avif"
+    },
+
+    {
+        "id": 8,
+        "name": "Air Max 90 Premium",
+        "brand": "Nike",
+        "price": 97,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/AIR+MAX+90+PRM.avif"
+    },
+
+    {
+        "id": 9,
+        "name": "Lunar Force 1",
+        "brand": "Nike",
+        "price": 170,
+        "category": "man",
+        "season": ["autumn", "winter"],
+        "image": "img_databse/LUNAR+FORCE+1+DUCKBOOT.avif"
+    },
+
+
+
+
+
+
+
+
+    {
+        "id": 10,
+        "name": "Dunk Low",
+        "brand": "Nike",
+        "price": 120,
+        "category": "woman",
+        "season": ["spring", "summer"],
+        "image": "img_databse/W+NIKE+DUNK+LOW.avif"
+    },
+
+    {
+        "id": 11,
+        "name": "LeBron XXIII 'Best In Class'",
+        "brand": "Nike",
+        "price": 210,
+        "category": "woman",
+        "season": ["spring", "summer"],
+        "image": "img_databse/LEBRON+XXIII.avif"
+    },
+
+    {
+        "id": 12,
+        "name": "Kobe IX Elite Low EM Protro",
+        "brand": "Nike",
+        "price": 190,
+        "category": "woman",
+        "season": ["spring", "summer"],
+        "image": "img_databse/KOBE+IX+ELITE+LOW+EM+PROTRO.avif"
+    },
+
+    {
+        "id": 13,
+        "name": "Pegasus 41",
+        "brand": "Nike",
+        "price": 145,
+        "category": "woman",
+        "season": ["spring", "summer"],
+        "image": "img_databse/W+AIR+ZOOM+PEGASUS+41.avif"
+    },
+
+    {
+        "id": 14,
+        "name": "Pegasus Plus",
+        "brand": "Nike",
+        "price": 190,
+        "category": "woman",
+        "season": ["spring", "summer"],
+        "image": "img_databse/W+PEGASUS+PLUS.avif"
+    },
+
+    {
+        "id": 15,
+        "name": "Pegasus Trail 5",
+        "brand": "Nike",
+        "price": 103,
+        "category": "woman",
+        "season": ["spring", "summer"],
+        "image": "img_databse/W+NIKE+REACTX+PEGASUS+TRAIL+5.avif"
+    },
+
+    {
+        "id": 16,
+        "name": "Pegasus Trail 5 GORE-TEX",
+        "brand": "Nike",
+        "price": 109,
+        "category": "woman",
+        "season": ["spring", "summer"],
+        "image": "img_databse/W+PEGASUS+TRAIL+5+GTX.avif"
+    },
+
+    {
+        "id": 17,
+        "name": "Winflo 11 PRM",
+        "brand": "Nike",
+        "price": 115,
+        "category": "woman",
+        "season": ["spring", "summer"],
+        "image": "img_databse/WMNS+NIKE+AIR+WINFLO+11+PRM.avif"
+    },
+
+    {
+        "id": 18,
+        "name": "Vomero Plus",
+        "brand": "Nike",
+        "price": 180,
+        "category": "woman",
+        "season": ["spring", "summer"],
+        "image": "img_databse/W+NIKE+VOMERO+PLUS.avif"
+    },
+
+
+
+
+    {
+        "id": 19,
+        "name": "RICK AND MORTY RS Surge",
+        "brand": "Puma",
+        "price": 130,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/PUMA-x-RICK-AND-MORTY-RS-Surge-Sneakers.avif"
+    },
+
+    {
+        "id": 20,
+        "name": "MagMax NITRO",
+        "brand": "Puma",
+        "price": 180,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/MagMax-NITRO™-2-Men's-Road-Running-Shoes.avif"
+    },
+
+    {
+        "id": 21,
+        "name": "MagMax NITRO 2",
+        "brand": "Puma",
+        "price": 180,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/MagMax-NITRO™-2-Men's-Road-Running-Shoes.avif"
+    },
+
+    {
+        "id": 22,
+        "name": "FUTURE 9 ULTIMATE",
+        "brand": "Puma",
+        "price": 245,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/FUTURE-9-ULTIMATE-Men's-Firm-Ground-Soccer-Cleats.avif"
+    },
+
+    {
+        "id": 23,
+        "name": "ULTRA 6 ULTIMATE",
+        "brand": "Puma",
+        "price": 240,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/ULTRA-6-ULTIMATE-Men's-Firm-Ground-Soccer-Cleats.avif"
+    },
+
+    {
+        "id": 24,
+        "name": "KING 20 ULTIMATE",
+        "brand": "Puma",
+        "price": 220,
+        "category": "man",
+        "season": ["spring", "summer"],
+        "image": "img_databse/Artificial-Ground-Soccer-Cleats.avif"
+    },
+
+    {
+        "id": 25,
+        "name": "Scuderia Ferrari",
+        "brand": "Puma",
+        "price": 450,
+        "category": "man",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/Scuderia-Ferrari-HP-20-Years-of-Red-Speedcat-Pro-Sneakers.avif"
+    },
+
+    {
+        "id": 26,
+        "name": "Speedcat OG",
+        "brand": "Puma",
+        "price": 100,
+        "category": "man",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/Speedcat-OG-Sneakers.avif"
+    },
+
+    {
+        "id": 27,
+        "name": "Suede Classic",
+        "brand": "Puma",
+        "price": 90,
+        "category": "man",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/Suede-Classic-Sneakers.avif"
+    },
+
+
+
+
+
+
+
+    {
+        "id": 28,
+        "name": "CARE BEARS",
+        "brand": "Puma",
+        "price": 100,
+        "category": "woman",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/PUMA-x-CARE-BEARS-x-SESAME-STREET-Basket-Women's-_Grumpy-Grouchy_-Sneakers.avif"
+    },
+
+    {
+        "id": 29,
+        "name": "Speedcat Boot",
+        "brand": "Puma",
+        "price": 220,
+        "category": "woman",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/Speedcat-Boot-Women's-Knee-High-Boots.avif"
+    },
+
+    {
+        "id": 30,
+        "name": "RICK AND MORTY MB.05",
+        "brand": "Puma",
+        "price": 135,
+        "category": "woman",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/PUMA-x-RICK-AND-MORTY-RS-Surge-Sneakers (1).avif"
+    },
+
+    {
+        "id": 31,
+        "name": "Mostro",
+        "brand": "Puma",
+        "price": 150,
+        "category": "woman",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/A$AP-ROCKY-x-PUMA-Mostro-Sneakers.avif"
+    },
+
+    {
+        "id": 32,
+        "name": "WICKED Speedcat Goodness",
+        "brand": "Puma",
+        "price": 110,
+        "category": "woman",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/PUMA-x-WICKED-Speedcat-Goodness-Women's-Sneakers.avif"
+    },
+
+    {
+        "id": 33,
+        "name": "WICKED Speedcat Elphie",
+        "brand": "Puma",
+        "price": 110,
+        "category": "woman",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/PUMA-x-WICKED-Speedcat-Elphie-Women's-Sneakers.avif"
+    },
+
+    {
+        "id": 34,
+        "name": "VANDYTHEPINK Suede",
+        "brand": "Puma",
+        "price": 120,
+        "category": "woman",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/PUMA-x-VANDYTHEPINK-Suede-Sneakers.avif"
+    },
+
+    {
+        "id": 35,
+        "name": "MagMax NITRO",
+        "brand": "Puma",
+        "price": 180,
+        "category": "woman",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/MagMax-NITRO™-2-Women's-Road-Running-Shoes.avif"
+    },
+
+    {
+        "id": 36,
+        "name": "ULTRA 6 ULTIMATE",
+        "brand": "Puma",
+        "price": 240,
+        "category": "woman",
+        "season": ["spring", "summer", "winter"],
+        "image": "img_databse/ULTRA-6-ULTIMATE-Women's-Firm-Ground-Soccer-Cleats.avif"
+    }
+
+]

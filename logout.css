@@ -1,0 +1,129 @@
+/* ===== Google Font Import - Montserrat (Для уніфікації з головною сторінкою) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Фірмовий колір: #f73b64 (Малиновий) */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; 
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Фон залишаємо світлим */
+    background: #f8f8f8; 
+    background-size: cover;
+    background-position: center;
+}
+.auth-wrapper{
+    width: 420px;
+    background: #ffffff;
+    /* Бордер: малиновий з прозорістю */
+    border: 2px solid rgba(247, 59, 100, .2); 
+    backdrop-filter: blur(9px);
+    /* ЗМІНА: Колір основного тексту на темно-сірий */
+    color: #333; 
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+.auth-wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+.auth-wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0; 
+    border: none;
+    outline: none;
+    /* Бордер: малиновий з прозорістю */
+    border: 2px solid rgba(247, 59, 100, .2); 
+    border-radius: 40px;
+    font-size: 16px;
+    /* ЗМІНА: Колір введеного тексту на темно-сірий */
+    color: #333; 
+    padding: 20px 45px 20px 20px;
+    transition: border-color 0.3s;
+}
+.input-box input:focus{
+    border-color: #f73b64; /* Малиновий при фокусі */
+}
+.input-box input::placeholder{
+    /* ЗМІНА: Колір плейсхолдеру на сірий */
+    color: #888888;
+}
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%; 
+    transform: translateY(-50%);
+    font-size: 20px;
+    /* ЗМІНА: Колір іконок полів на темно-сірий */
+    color: #333; 
+}
+.auth-wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    /* Колір тексту "Remember Me" буде #333, успадковано від .auth-wrapper */
+}
+.remember-forgot label input{
+    accent-color: #f73b64; 
+    margin-right: 3px;
+}
+.remember-forgot a{
+    /* ЗМІНА: Колір посилання на малиновий */
+    color: #f73b64; 
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.auth-wrapper .btn{
+    width: 100%;
+    height: 45px;
+    /* Кнопка: білий фон з малиновим бордером */
+    background: #fff;
+    border: 1px solid #f73b64; 
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.auth-wrapper .btn:hover {
+    /* Ховер: повністю малиновий */
+    background: #f73b64; 
+    color: #fff;
+    border-color: #f73b64;
+}
+.auth-wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+    color: #333; /* Текст "Dont have an account?" - темно-сірий */
+}
+.register-link p a{
+    /* ЗМІНА: Колір посилання на малиновий */
+    color: #f73b64; 
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover{
+    text-decoration: underline;
+}

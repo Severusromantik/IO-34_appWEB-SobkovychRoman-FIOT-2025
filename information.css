@@ -1,0 +1,87 @@
+/*
+ * information.css
+ * Основні стилі беруться з styles.css
+ */
+
+/* 1. Стилі для розділів тексту */
+.information-main .info-chapter {
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.information-main h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    padding-top: 20px; /* Додатковий відступ зверху для якірних посилань */
+}
+
+.information-main p, .information-main li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Лінія-розділювач між главами */
+main hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 40px 0;
+}
+
+/* Стиль для посилання на логотипі BRANDS у шапці */
+.main-title-link {
+    text-decoration: none; /* Прибирає підкреслення */
+    color: inherit;
+}
+
+/* 2. Адаптація для планшетів і мобільних (Max-Width: 1024px) */
+@media (max-width: 1024px) {
+    
+    .information-main .info-chapter {
+        padding: 15px 0; /* Зменшуємо вертикальний відступ розділів */
+        margin-bottom: 15px;
+    }
+    
+    .information-main h2 {
+        font-size: 24px; /* Зменшуємо розмір заголовка */
+        margin-bottom: 12px;
+        padding-top: 15px;
+    }
+    
+    .information-main p, .information-main li {
+        font-size: 15px; /* Трохи зменшуємо основний текст */
+        line-height: 1.5;
+    }
+
+    main hr {
+        margin: 30px 0; /* Зменшуємо відступ розділювача */
+    }
+}
+
+/* 3. Адаптація для мобільних пристроїв (Max-Width: 768px) */
+@media (max-width: 768px) {
+    
+    .information-main .info-chapter {
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+    
+    .information-main h2 {
+        font-size: 22px; /* Ще трохи зменшуємо заголовки для малих екранів */
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .information-main p, .information-main li {
+        font-size: 14px; /* Комфортний розмір тексту для мобільних */
+        line-height: 1.5;
+    }
+
+    main hr {
+        margin: 20px 0;
+    }
+}
