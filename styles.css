@@ -72,6 +72,11 @@ header {
     z-index: 100;
 }
 
+.language-menu.active {
+    z-index: 101; /* Це гарантує, що воно буде поверх сусіднього меню (Міста) */
+}
+
+
 .select-menu .select-button{
     display: flex;
     height: 55px;
@@ -484,3 +489,110 @@ footer {
     
     
 }
+
+
+
+
+
+
+/* ==== Бічне меню (Sidebar) ==== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Меню буде виїжджати справа */
+    width: 300px; /* Ширина меню */
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transform: translateX(100%); /* Приховуємо меню за межами екрану */
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    overflow-y: auto; /* Дозволяє прокрутку, якщо вмісту багато */
+}
+
+/* Стан відкриття меню */
+.sidebar.active {
+    transform: translateX(0); /* Висуваємо меню на екран */
+}
+
+.sidebar .close-btn {
+    text-align: right;
+    margin-bottom: 20px;
+}
+.sidebar .close-btn i {
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Стилі для посилань у бічному меню */
+.sidebar-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.sidebar-nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 300;
+    display: block;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+.sidebar-nav-links li:last-child a {
+    border-bottom: none;
+}
+
+/* Розділювач для Sidebar */
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+/* Переконаємося, що select-menu в бічному меню виглядає правильно */
+.sidebar-select-menu {
+    width: 100%; /* Займає всю ширину sidebar */
+    margin: 10px 0;
+}
+
+
+/* ОНОВЛЕННЯ ДЛЯ МОБІЛЬНОЇ АДАПТАЦІЇ (Max-Width: 1024px) */
+@media (max-width: 1024px) {
+    /* Додаємо невеликий оверлей для затемнення контенту поза меню */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999; /* Нижче за sidebar */
+        display: none;
+    }
+    .sidebar-overlay.active {
+        display: block;
+    }
+    
+    /* Для дуже малих екранів */
+    .sidebar {
+        width: 80%; /* Щоб залишити трохи місця зліва */
+        max-width: 300px; 
+    }
+}
+
+/* Видалимо приховані елементи з header, коли sidebar активний, 
+   якщо ви не переносили їх у сайдбар */
+/* @media (max-width: 1024px) {
+    .header-left .select-menu {
+        display: none; 
+    }
+}
+*/

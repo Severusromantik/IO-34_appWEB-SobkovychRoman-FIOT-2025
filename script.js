@@ -55,3 +55,35 @@ selectMenus.forEach(optionMenu => {
         }
     });
 });
+
+
+/* ===== НОВИЙ КОД: Логіка бургер-меню (Sidebar) ===== */
+
+const menuToggle = document.querySelector(".menu-toggle");
+const sidebar = document.querySelector(".sidebar");
+const closeBtn = document.querySelector(".sidebar .close-btn");
+
+// Функція для відкриття/закриття
+function toggleSidebar() {
+    sidebar.classList.toggle("active");
+}
+
+// 1. Відкриття меню по кліку на бургер-іконку
+if (menuToggle) {
+    menuToggle.addEventListener("click", toggleSidebar);
+}
+
+// 2. Закриття меню по кліку на іконку "X"
+if (closeBtn) {
+    closeBtn.addEventListener("click", toggleSidebar);
+}
+// 3. Закриття меню по кліку поза ним (додаємо до body/document)
+document.addEventListener("click", (e) => {
+    // Якщо клік був на бургері, то ігноруємо, бо він уже його відкрив
+    if (e.target.closest('.menu-toggle')) return; 
+
+    // Якщо клік був поза сайдбаром і сайдбар відкритий
+    if (sidebar && !sidebar.contains(e.target) && sidebar.classList.contains('active')) {
+        toggleSidebar();
+    }
+});

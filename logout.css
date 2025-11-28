@@ -127,3 +127,64 @@ body{
 .register-link p a:hover{
     text-decoration: underline;
 }
+
+
+
+
+
+/* ==== АДАПТАЦІЯ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ (Max-Width: 576px) ==== */
+
+@media (max-width: 576px) {
+    
+    /* 1. Налаштування обгортки (Auth-Wrapper) */
+    .auth-wrapper{
+        /* Використовуємо 90% ширини для мобільних пристроїв */
+        width: 90%; 
+        /* Зменшуємо максимальну ширину */
+        max-width: 350px;
+        /* Зменшуємо внутрішні відступи (padding) для економії місця */
+        padding: 25px 30px;
+        /* Забезпечуємо, що мінімальна висота body не має жорстких обмежень */
+        min-height: auto;
+    }
+    
+    /* 2. Заголовки */
+    .auth-wrapper h1{
+        font-size: 30px; /* Трохи зменшуємо розмір заголовка */
+    }
+    
+    /* 3. Поля вводу (Input-Box) */
+    .auth-wrapper .input-box{
+        margin: 25px 0; /* Трохи зменшуємо вертикальні відступи між полями */
+    }
+
+    /* 4. Чекбокс та посилання "Забули пароль" */
+    .auth-wrapper .remember-forgot{
+        font-size: 14px; /* Трохи зменшуємо розмір тексту */
+        flex-direction: column; /* Розташовуємо елементи у стовпчик, щоб уникнути переповнення */
+        gap: 8px; /* Додаємо відступ між елементами в стовпчику */
+    }
+    
+    /* 5. Кнопка */
+    .auth-wrapper .btn{
+        height: 40px; /* Трохи зменшуємо висоту кнопки */
+        font-size: 15px;
+    }
+    
+    /* 6. Посилання "Зареєструватися" */
+    .auth-wrapper .register-link{
+        font-size: 14px;
+        margin: 15px 0 10px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    /* Додаткове стиснення для дуже маленьких екранів */
+    .auth-wrapper {
+        padding: 20px 20px;
+    }
+    .auth-wrapper h1 {
+        font-size: 28px;
+    }
+}
