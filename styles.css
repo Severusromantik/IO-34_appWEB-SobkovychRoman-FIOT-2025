@@ -267,7 +267,7 @@ main {
     width: 0.8rem;
     height: 0.8rem;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #fa6aa8;
     opacity: 0.75;
     transition: opacity ease 250ms;
 }
@@ -310,6 +310,7 @@ main {
     color: white; border: none; border-radius: 25px;
     font-size: 16px; font-weight: 500; cursor: pointer;
     text-transform: uppercase; transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 .card-button:hover { background-color: #e52952; }
 
@@ -596,3 +597,10 @@ footer {
     }
 }
 */
+
+
+
+
+
+
+
