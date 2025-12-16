@@ -4,13 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterSeasonLinks = document.querySelectorAll('.filter-season');
     const currentFilterTitle = document.getElementById('current-filter-title');
 
+    const searchInput = document.getElementById('search-input');
+    const searchToggleBtn = document.querySelector('.search-toggle-btn');
+    const searchContainer = document.querySelector('.search-container');
+
     // =================================================================
     // СТАН ФІЛЬТРАЦІЇ: зберігаємо активні фільтри тут
     // Використовуємо Set для уникнення дублікатів та швидкого пошуку
     // =================================================================
     let currentFilters = {
         categories: new Set(),
-        seasons: new Set()
+        seasons: new Set(),
+        searchQuery: ''
     };
 
     // =================================================================
@@ -102,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const allProducts = await fetchProducts();
         const activeCategories = Array.from(currentFilters.categories);
         const activeSeasons = Array.from(currentFilters.seasons);
+        const searchQuery = currentFilters.searchQuery.toLowerCase().trim();
 
         let filteredProducts = allProducts;
         let titleParts = [];
@@ -130,12 +136,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const seasonNames = activeSeasons.map(s => seasonMap[s]).join(' та ');
             titleParts.push(seasonNames);
         }
+
+        // 3. Фільтрація за пошуковим запитом (застосовується до вже відфільтрованих результатів)
+        if (searchQuery.length > 0) {
+            filteredProducts = filteredProducts.filter(product => {
+               const productName = product.name.toLowerCase();
+               const productBrand = product.brand.toLowerCase();
+               
+               // Перевіряємо, чи містить назва або бренд пошуковий запит
+               return productName.includes(searchQuery) || productBrand.includes(searchQuery);
+           });
+           // Якщо є пошук, додаємо його до заголовка
+           titleParts.push(`(Пошук: "${searchQuery}")`);
+       }
         
         // Формуємо заголовок
-        if (titleParts.length === 2) {
-            currentFilterTitle.textContent = `Взуття: ${titleParts[0]} та ${titleParts[1]}`;
-        } else if (titleParts.length === 1) {
-            currentFilterTitle.textContent = `Взуття: ${titleParts[0]}`;
+        if (titleParts.length > 0) {
+            currentFilterTitle.textContent = `Результати: ${titleParts.join(' | ')}`;
         } else {
             currentFilterTitle.textContent = 'Всі товари';
         }
@@ -190,6 +207,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
             renderProducts(); 
         });
+    });
+
+    // =================================================================
+    // НОВА ЛОГІКА: УПРАВЛІННЯ ПОШУКОМ
+    // =================================================================
+    
+    // 1. Увімкнення/вимкнення поля пошуку
+    searchToggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        searchContainer.classList.toggle('active');
+        
+        if (searchContainer.classList.contains('active')) {
+            searchInput.focus(); // Фокус на поле при відкритті
+
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.header-center .title').style.display = 'none';
+            }
+
+        } else {
+            // Приховуємо поле: очищаємо запит та фільтруємо
+            if (searchInput.value !== '') {
+                searchInput.value = ''; // Очищаємо значення
+                currentFilters.searchQuery = '';
+                renderProducts(); // Перефільтровуємо без пошуку
+            }
+
+            if (window.innerWidth <= 1024) {
+                document.querySelector('.header-center .title').style.display = 'block';
+            }
+        }
+    });
+
+    // 2. Фільтрація при введенні тексту (на льоту)
+    searchInput.addEventListener('input', () => {
+        currentFilters.searchQuery = searchInput.value;
+        renderProducts();
     });
 
     // =================================================================

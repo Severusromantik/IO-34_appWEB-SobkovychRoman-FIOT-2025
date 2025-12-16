@@ -99,6 +99,88 @@
     padding-bottom: 5px;
 }
 
+/* Стилі для пошукової системи */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 40px; 
+}
+
+#search-input {
+    width: 0; /* Приховано за замовчуванням */
+    padding: 0;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: width 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none; /* Не реагує на події, коли приховано */
+}
+
+/* Стан активності: розширюємо поле введення */
+.search-container.active #search-input {
+    width: 250px; 
+    padding: 10px 15px;
+    opacity: 1;
+    pointer-events: auto; 
+}
+
+/* Іконка пошуку */
+.search-toggle-btn {
+    z-index: 10;
+}
+
+/* Мобільна адаптація для поля пошуку */
+@media (max-width: 1024px) {
+    header {
+        /* Зберігаємо оригінальну сітку */
+        padding-bottom: 70px; /* Збільшуємо загальну висоту хедера */
+    }
+
+    /* === Стилі для контейнера пошуку === */
+    .search-container {
+        position: absolute; 
+        top: 60px; /* Розміщуємо під першим рядом */
+        right: 20px; /* ДОДАНО: Фіксуємо його правий край */
+        left: 20px;  /* ДОДАНО: Розтягуємо від правого краю до лівого */
+        width: auto; /* width: 100% вже не потрібен, використовуємо left/right */
+        padding: 0;
+        height: auto;
+        /* Переконайтеся, що елементи всередині вирівняні по правому краю
+           для неактивного стану, щоб лупа була справа */
+        display: flex;
+        justify-content: flex-end; /* Лого лупи справа */
+    }
+
+    /* === Стилі для поля введення === */
+    #search-input {
+        /* Існуючі стилі (width: 0, opacity: 0, transition) залишаються */
+        margin-right: 10px; /* Повертаємо відступ від лупи */
+    }
+    
+    /* Стан активності: поле виїжджає вліво */
+    .search-container.active #search-input {
+        /* Використовуємо фіксовану ширину, як на десктопі,
+           або максимально допустиму для екрана */
+        width: 250px; /* АБО 80vw, якщо хочете більше гнучкості */
+        padding: 10px 15px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Вирівнюємо вміст контейнера активного пошуку по правому краю,
+       щоб поле виїжджало зліва від лупи */
+    .search-container.active {
+        justify-content: flex-end; 
+    }
+
+}
+
+
+
 /* Мобільна адаптація */
 @media (max-width: 768px) {
     #current-filter-title {
