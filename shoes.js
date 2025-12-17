@@ -8,19 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchToggleBtn = document.querySelector('.search-toggle-btn');
     const searchContainer = document.querySelector('.search-container');
 
-    // =================================================================
     // СТАН ФІЛЬТРАЦІЇ: зберігаємо активні фільтри тут
     // Використовуємо Set для уникнення дублікатів та швидкого пошуку
-    // =================================================================
     let currentFilters = {
         categories: new Set(),
         seasons: new Set(),
         searchQuery: ''
     };
 
-    // =================================================================
     // ФУНКЦІЯ: Читання параметрів із URL та ініціалізація стану
-    // =================================================================
     function initializeStateFromUrl() {
         const params = new URLSearchParams(window.location.search);
         
@@ -37,9 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // =================================================================
     // ФУНКЦІЯ: Завантаження даних із JSON
-    // =================================================================
     async function fetchProducts() {
         try {
             const response = await fetch('shoes.json'); 
@@ -54,9 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // =================================================================
-    // ФУНКЦІЯ: Створення HTML-картки (без змін)
-    // =================================================================
+    // ФУНКЦІЯ: Створення HTML-картки 
     function createProductCard(product) {
         const card = document.createElement('a');
         card.href = `product.html?id=${product.id}`; 
@@ -75,9 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return card;
     }
 
-    // =================================================================
     // ФУНКЦІЯ: Оновлення активного класу для виділення фільтрів
-    // =================================================================
     function updateActiveFilterUI() {
         // Прибираємо активний клас з усіх посилань
         document.querySelectorAll('.nav-links a, .sidebar-nav-links a').forEach(link => {
@@ -100,9 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // =================================================================
     // ОСНОВНА ФУНКЦІЯ: Рендеринг та Мультифільтрація
-    // =================================================================
     async function renderProducts() {
         const allProducts = await fetchProducts();
         const activeCategories = Array.from(currentFilters.categories);
@@ -171,9 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateActiveFilterUI();
     }
 
-    // =================================================================
     // ОБРОБНИКИ ПОДІЙ ДЛЯ ФІЛЬТРІВ (Toggle-логіка)
-    // =================================================================
     
     // Обробники для категорій (Жіноче, Чоловіче)
     filterCategoryLinks.forEach(link => {
@@ -209,9 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // =================================================================
     // НОВА ЛОГІКА: УПРАВЛІННЯ ПОШУКОМ
-    // =================================================================
     
     // 1. Увімкнення/вимкнення поля пошуку
     searchToggleBtn.addEventListener('click', (e) => {
@@ -245,9 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderProducts();
     });
 
-    // =================================================================
     // ПОЧАТКОВИЙ ЗАПУСК при завантаженні сторінки
-    // =================================================================
     
     // 1. Ініціалізуємо стан фільтрами з URL (якщо вони є)
     initializeStateFromUrl();

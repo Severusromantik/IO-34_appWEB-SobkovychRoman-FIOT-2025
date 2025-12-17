@@ -57,7 +57,7 @@ selectMenus.forEach(optionMenu => {
 });
 
 
-/* ===== НОВИЙ КОД: Логіка бургер-меню (Sidebar) ===== */
+/* ===== Логіка бургер-меню (Sidebar) ===== */
 
 const menuToggle = document.querySelector(".menu-toggle");
 const sidebar = document.querySelector(".sidebar");
